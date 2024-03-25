@@ -1,0 +1,53 @@
+import java.awt.*;
+import java.awt.event.*;
+
+public class MyCalculator extends Frame {
+    public boolean setClear = true;
+    double number, memValue;
+    char op;
+
+    // Arrays para os botões
+    MyDigitButton[] digitButton = new MyDigitButton[12];
+    MyOperatorButton[] operatorButton = new MyOperatorButton[8];
+    MyMemoryButton[] memoryButton = new MyMemoryButton[4];
+    MySpecialButton[] specialButton = new MySpecialButton[3];
+
+    // Labels para exibir resultados
+    Label displayLabel = new Label("0", Label.RIGHT);
+    Label memLabel = new Label(" ", Label.RIGHT);
+
+    // Coordenadas e tamanhos dos componentes
+    final int FRAME_WIDTH = 325, FRAME_HEIGHT = 325;
+    final int HEIGHT = 30, WIDTH = 30, H_SPACE = 10, V_SPACE = 10;
+    final int TOPX = 30, TOPY = 50;
+
+    public MyCalculator(String frameText) {
+        super(frameText);
+
+        // Configurações dos labels
+        displayLabel.setBounds(TOPX, TOPY, 240, HEIGHT);
+        displayLabel.setBackground(Color.BLUE);
+        displayLabel.setForeground(Color.WHITE);
+        add(displayLabel);
+
+        memLabel.setBounds(TOPX, TOPY + HEIGHT + V_SPACE, WIDTH, HEIGHT);
+        add(memLabel);
+
+        // Configurações dos botões (memória, especiais, dígitos e operadores)
+        // ...
+
+        // Adicione os botões ao frame
+        // ...
+
+        setSize(FRAME_WIDTH, FRAME_HEIGHT);
+        setLayout(null);
+        setVisible(true);
+    }
+
+    // Implementação dos botões e lógica de cálculo
+    // ...
+
+    public static void main(String[] args) {
+        new MyCalculator("Calculadora Simples");
+    }
+}
